@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yourusername.github.io/dev-portfolio-react-tailwind",
+  "homepage": "https://bryandanendra.github.io/porto",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
