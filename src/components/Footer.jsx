@@ -17,7 +17,7 @@ export const Footer = () => {
               <BlurText text="Get in touch" className="text-gray-400"/>
             </h2>
             <a
-              className="md:text-7xl text-4xl font-semibold text-white underline decoration-gray-400 decoration-2
+              className="md:text-7xl text-3xl font-semibold text-white underline decoration-gray-400 decoration-2
                                     underline-offset-4 hover:decoration-gray-200 transition duration-300"
               href="mailto:john@doe.com"
             >
@@ -46,9 +46,9 @@ export const Footer = () => {
         </div>
 
         <div className="relative mt-12 container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
-          <p className="text-gray-200 caption text-n-4 lg:block">
+          {/* <p className="text-gray-200 caption text-n-4 lg:block">
             © 2024. All rights reserved.
-          </p>
+          </p> */}
 
           <ul className="flex gap-5 flex-wrap">
             <a
@@ -79,13 +79,13 @@ export const Footer = () => {
             >
               <AiFillInstagram size={30} />
             </a>
-            <a
+            {/* <a
               href="https://telegram.org"
               aria-label="Telegram"
               className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
             >
               <FaTelegramPlane size={30} />
-            </a>
+            </a> */}
           </ul>
         </div>
       </div>

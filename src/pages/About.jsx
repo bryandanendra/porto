@@ -95,7 +95,7 @@ export const About = () => {
         </p> */}
       </div>
       
-      <div className="h-[850px] mb-12">
+      <div className="h-[1250px] mb-12"> {/* 850px untuk 3 coloumn di mobile*/}
         <Masonry data={masonryData} />
       </div>
       
