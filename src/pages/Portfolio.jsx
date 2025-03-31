@@ -54,8 +54,8 @@ export const Portfolio = () => {
   };
 
   return (
-    <div className="text-white py-8 md:py-8" id="portfolio">
-      <div className="container mx-auto px-4">
+    <div className="text-white py-8 md:py-8 overflow-hidden" id="portfolio">
+      <div className="mx-auto px-4 sm:px-8 max-w-[1400px]">
         <div className="text-6xl font-bold text-center mb-16">
           <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl">Selected Projects</ScrollFloat> 
         </div>

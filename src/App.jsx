@@ -8,7 +8,7 @@ import SplashCursor from "./blocks/Animations/SplashCursor/SplashCursor";
 
 export default function App() {
   return (
-    <>
+    <div className="w-full overflow-x-hidden">
       <SplashCursor />
       <Navbar/>
       <Hero/>
@@ -16,6 +16,6 @@ export default function App() {
       <Portfolio/>
       <Stack/>
       <Footer/>
-    </>
+    </div>
   )
 }

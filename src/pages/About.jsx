@@ -83,8 +83,8 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-8 px-8 max-w-[1400px] mx-auto">
-      <div className="text-center mb-12">
+    <section id="about" className="py-8 px-4 sm:px-8 max-w-[1400px] mx-auto overflow-hidden">
+      <div className="text-center mb-8 sm:mb-12">
         <div className="text-5xl md:text-7xl text-white font-bold mb-6">
           <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl">About Me</ScrollFloat>
         </div>
@@ -95,7 +95,7 @@ export const About = () => {
         </p> */}
       </div>
       
-      <div className="h-[1250px] mb-12"> {/* 850px untuk 3 coloumn di mobile*/}
+      <div className="h-[1250px] mb-8 sm:mb-12"> {/* 850px untuk 3 coloumn di mobile*/}
         <Masonry data={masonryData} />
       </div>
       

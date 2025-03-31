@@ -71,14 +71,14 @@ function Masonry({ data }) {
   return (
     <div
       ref={ref}
-      className="relative w-full h-full"
+      className="relative w-full h-full overflow-hidden"
       style={{ height: Math.max(...heights) }}
     >
       {transitions((style, item) => (
         <a.div
           key={item.id}
           style={style}
-          className="absolute p-[15px] [will-change:transform,width,height,opacity]"
+          className="absolute p-[10px] sm:p-[15px] [will-change:transform,width,height,opacity]"
         >
           <div
             className="relative w-full h-full overflow-hidden uppercase text-[10px] leading-[10px] rounded-[4px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] transition duration-300 ease hover:scale-110"
