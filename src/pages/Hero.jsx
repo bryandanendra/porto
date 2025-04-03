@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilepic from "../assets/images/profilepic.png";
+import profilepic from "../assets/images/profilepic.PNG";
 import Aurora from "../components/Aurora";
 import StarBorder from "../components/StarBorder";
 import BlurText from "../blocks/TextAnimations/BlurText/BlurText";
@@ -47,7 +47,7 @@ export const Hero = () => {
               </div>
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
-              <SplitText text="I am a video editor focusing on creating motion graphics and making engaging videos editing i always provides clients with best experience." />
+              <SplitText text="I'm a video editor specializing in motion graphics, creating engaging visual content that captivates audiences. Delivering exceptional experiences for my clients is at the heart of everything I do." />
             </p>
 
             <div className="flex gap-4 justify-center">

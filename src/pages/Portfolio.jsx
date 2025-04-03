@@ -5,7 +5,6 @@ import proj1 from "../assets/images/tmo-nusantara-tn.jpg";
 import proj2 from "../assets/images/overthink-tn.jpg";
 import proj3 from "../assets/images/melangkah-tn.jpg";
 import proj4 from "../assets/images/smaug-rewind-tn.jpg";
-import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiChevronDown } from "react-icons/fi";
 import ScrollFloat from "../blocks/TextAnimations/ScrollFloat/ScrollFloat";
@@ -115,12 +114,6 @@ export const Portfolio = () => {
                             className="text-emerald-400 hover:text-blue-300 transition-colors"
                           >
                             <HiOutlineExternalLink />
-                          </a>
-                          <a
-                            href={project.git}
-                            className="text-gray-400 hover:text-gray-300 transition-colors"
-                          >
-                            <FaGithub />
                           </a>
                         </div>
                       </div>

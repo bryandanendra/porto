@@ -1,5 +1,6 @@
 import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
+// import { Navbar } from "./components/Navbar";
+import SlideNav from "./components/SlideNav";
 import { About } from "./pages/About";
 import { Hero } from "./pages/Hero";
 import { Portfolio } from "./pages/Portfolio";
@@ -10,7 +11,7 @@ export default function App() {
   return (
     <div className="w-full overflow-x-hidden">
       <SplashCursor />
-      <Navbar/>
+      <SlideNav />
       <Hero/>
       <About/>
       <Portfolio/>
