@@ -62,15 +62,19 @@ export const Hero = () => {
                 </StarBorder>
               </a>
               <motion.a
-                href="#portfolio"
+                
                 whileHover={{ scale: 1.05 }}
-                className="p-1 border border-white/20 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center"
+                className="inline-block"
               >
-                <img 
-                  src="https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif?cid=790b76118ayqa107jjviakl6fgxsezaws3edvan6o9tjwu7d&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
-                  alt="Arrow GIF" 
-                  className="w-12 h-12 object-cover rounded-full"
-                />
+                <div className="relative inline-block py-[1px] overflow-hidden rounded-[20px] font-medium hover:scale-105 transition-transform">
+                  <div className="relative z-10 bg-gradient-to-b from-gray-900 to-black border border-gray-800 text-white rounded-[20px] overflow-hidden" style={{ width: '149px', height: '58px' }}>
+                    <img 
+                      src="https://media.giphy.com/media/KpACNEh8jXK2Q/giphy.gif" 
+                      alt="View Work" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </motion.a>
             </div>
           </motion.div>
