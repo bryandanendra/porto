@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+// import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // tidak diperlukan lagi
+import Hamburger from 'hamburger-react'; // import hamburger-react
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -91,11 +92,16 @@ export const Navbar = () => {
       </div>
 
       <div
-        onClick={toggleNav}
         className="md:hidden absolute top-5 right-14 border rounded
-                                                z-50 text-white/70 border-white/70 p-2 cursor-pointer"
+                             z-50 text-white/70 border-white/70 p-2 cursor-pointer"
       >
-        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+        <Hamburger 
+          toggled={nav} 
+          toggle={setNav} 
+          direction="right" 
+          duration={0.5}
+          size={25}
+        />
       </div>
 
       <AnimatePresence mode="wait">

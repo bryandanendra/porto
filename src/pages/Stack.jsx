@@ -51,7 +51,7 @@ export const Stack = () => {
       id="stack"
     >
       <div className="text-4xl sm:text-6xl md:text-7xl text-gray-100 font-bold mb-10 md:mb-16 lg:mb-20 mx-auto">
-        <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl">Video Editing Tools</ScrollFloat>
+        <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl">Editing Tools</ScrollFloat>
       </div>
       <div className="flex flex-wrap justify-center gap-5 md:gap-8 pt-2" ref={ref}>
         {stackItems.map((item, index) => (

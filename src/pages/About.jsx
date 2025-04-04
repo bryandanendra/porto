@@ -85,17 +85,12 @@ export const About = () => {
   return (
     <section id="about" className="py-8 px-4 sm:px-8 max-w-[1400px] mx-auto overflow-hidden">
       <div className="text-center mb-8 sm:mb-12">
-        <div className="text-5xl md:text-7xl text-white font-bold mb-6">
-          <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl">About Me</ScrollFloat>
+        <div className="text-5xl md:text-6xl text-white font-bold mb-6">
+          <ScrollFloat containerClassName="inline-block" textClassName="text-white text-9xl md:text-7xl">About Me</ScrollFloat>
         </div>
-        {/* <p className="text-white/70 max-w-2xl mx-auto text-lg">
-          Saya adalah seorang video editor profesional dengan pengalaman dalam menciptakan konten visual yang menarik. 
-          Spesialisasi saya adalah motion graphics dan visual effects menggunakan Adobe Premiere Pro, After Effects, 
-          DaVinci Resolve dan CapCut.
-        </p> */}
       </div>
       
-      <div className="h-[1250px] mb-8 sm:mb-12"> {/* 850px untuk 3 coloumn di mobile*/}
+      <div className="h-[1250px] md:h-[850px] lg:h-[700px] xl:h-[600px] mb-8 sm:mb-16"> {/* Tinggi responsif berdasarkan ukuran layar */}
         <Masonry data={masonryData} />
       </div>
       

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+// import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Hamburger from 'hamburger-react';
 import { motion, AnimatePresence } from "framer-motion";
 import navbarNoise from "../assets/navbar-noise.svg";
 import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
@@ -142,11 +143,17 @@ export const SlideNav = () => {
       </div>
 
       <div
-        onClick={toggleNav}
         className="md:hidden absolute top-5 right-5 border rounded
-                  z-[100] text-white/70 border-white/70 p-2 cursor-pointer"
+                  z-[100] text-white/70 border-white/70 cursor-pointer"
       >
-        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+        <Hamburger 
+          toggled={nav} 
+          toggle={toggleNav} 
+          direction="right" 
+          duration={0.5}
+          size={22}
+          color="white"
+        />
       </div>
 
       <AnimatePresence mode="wait">
