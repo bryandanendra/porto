@@ -61,12 +61,17 @@ export const Hero = () => {
                   Contact Me
                 </StarBorder>
               </a>
-              <motion.button
+              <motion.a
+                href="#portfolio"
                 whileHover={{ scale: 1.05 }}
-                className="px-6 py-3 border border-white/20 rounded-full font-medium hover:bg-white/10 transition-colors"
+                className="p-1 border border-white/20 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center"
               >
-                View Work
-              </motion.button>
+                <img 
+                  src="https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif?cid=790b76118ayqa107jjviakl6fgxsezaws3edvan6o9tjwu7d&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
+                  alt="Arrow GIF" 
+                  className="w-12 h-12 object-cover rounded-full"
+                />
+              </motion.a>
             </div>
           </motion.div>
         </div>
