@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import profilepic from "../assets/images/profilepic.PNG";
 import Aurora from "../components/Aurora";
-import StarBorder from "../components/StarBorder";
+import StarBorder from "../blocks/Animations/StarBorder/StarBorder";
 import BlurText from "../blocks/TextAnimations/BlurText/BlurText";
 import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
 
@@ -40,14 +40,15 @@ export const Hero = () => {
             className="max-w-2xl w-full"
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-3 md:mb-4 text-center">
-              Hi, I am
-              <br />
+              <div className="flex justify-center w-full mb-2">
+                <BlurText text="Hi, I am" className="text-white" />
+              </div>
               <div className="flex justify-center w-full">
                 <BlurText text="Brian Danendra" className="text-blue-400" />
               </div>
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
-              <SplitText text="I'm a video editor specializing in motion graphics, creating engaging visual content that captivates audiences. Delivering exceptional experiences for my clients is at the heart of everything I do." />
+            <p className="text-base md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
+              <SplitText text="I'm a video editor focused on creating engaging visual content that captivates audiences. With expertise in motion graphics and storytelling, I deliver exceptional experiences that help clients achieve their goals." />
             </p>
 
             <div className="flex gap-4 justify-center">

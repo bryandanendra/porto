@@ -1,12 +1,12 @@
 import React from "react";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillFacebook,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
 import BlurText from "../blocks/TextAnimations/BlurText/BlurText";
+import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
 export const Footer = () => {
   return (
     <footer className="py-8" id="contact">
@@ -19,15 +19,30 @@ export const Footer = () => {
             <a
               className="md:text-7xl text-3xl font-semibold text-white underline decoration-gray-400 decoration-2
                                     underline-offset-4 hover:decoration-gray-200 transition duration-300"
-              href="mailto:john@doe.com"
+              href="mailto:brian4icm@gmail.com"
             >
               brian4icm@gmail.com
             </a>
+            <div className="mt-4">
+              <p className="text-white/70 text-base md:text-xl">Or find me on Instagram:</p>
+              <a 
+                href="https://instagram.com/brian.danendra" 
+                className="text-xl md:text-2xl font-medium text-white/90 hover:text-white transition duration-300 flex items-center gap-2 mt-1"
+              >
+                <AiFillInstagram size={24} />
+                <SplitText 
+                  text="@brian.danendra" 
+                  delay={50}
+                  textAlign="left"
+                  className="text-xl md:text-2xl"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="text-white/50 mt-12">
             <div className="text-lg mb-8">
-              <p className="font-bold">Office</p>
+              <p className="font-bold">Location</p>
               <p>Surabaya</p>
               <p>East Java</p>
               <p>Indonesia</p>
@@ -52,40 +67,26 @@ export const Footer = () => {
 
           <ul className="flex gap-5 flex-wrap">
             <a
-              href="https://github.com"
+              href="https://github.com/bryandanendra"
               aria-label="GitHub"
               className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
             >
               <AiFillGithub size={30} />
             </a>
-            <a
-              href="https://x.com"
-              aria-label="X (Twitter)"
+            {/* <a
+              href="https://discord.com/users/yourusername"
+              aria-label="Discord"
               className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
             >
-              <AiOutlineTwitter size={30} />
-            </a>
+              <FaDiscord size={30} />
+            </a> */}
             <a
-              href="https://facebook.com"
-              aria-label="Facebook"
-              className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
-            >
-              <AiFillFacebook size={30} />
-            </a>
-            <a
-              href="https://instagram.com"
+              href="https://instagram.com/brian.danendra"
               aria-label="Instagram"
               className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
             >
               <AiFillInstagram size={30} />
             </a>
-            {/* <a
-              href="https://telegram.org"
-              aria-label="Telegram"
-              className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
-            >
-              <FaTelegramPlane size={30} />
-            </a> */}
           </ul>
         </div>
       </div>
