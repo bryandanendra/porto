@@ -115,16 +115,16 @@ export const SlideNav = () => {
 
   // Style untuk background dengan noise pattern
   const noiseStyle = {
-    backgroundColor: 'lightgray',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundImage: `url(${navbarNoise})`,
     backgroundRepeat: 'repeat',
-    backgroundBlendMode: 'multiply',
+    backgroundBlendMode: 'overlay',
   };
 
   return (
     <div className="z-50 fixed flex justify-center w-full text-white font-bold">
       <div
-        className="border border-white/20 mt-8 backdrop-blur-3xl rounded-3xl 
+        className="border border-white/20 mt-8 backdrop-blur-xl bg-black/30 rounded-3xl 
                   hidden md:flex items-center justify-center p-2 max-w-[400px] mx-auto"
       >
         <ul className="flex flex-row p-2 space-x-8">
@@ -133,7 +133,7 @@ export const SlideNav = () => {
               <a
                 href={link.path}
                 className="transform hover:skew-x-12 hover:text-white/50 
-                          transition-all duration-300 ease-in-out"
+                          transition-all duration-300 ease-in-out text-white"
               >
                 {link.title}
               </a>
@@ -144,7 +144,7 @@ export const SlideNav = () => {
 
       <div
         className="md:hidden absolute top-5 right-5 border rounded
-                  z-[100] text-white/70 border-white/70 cursor-pointer"
+                  z-[100] text-white border-white/70 cursor-pointer backdrop-blur-xl bg-black/30 p-1"
       >
         <Hamburger 
           toggled={nav} 
@@ -166,7 +166,7 @@ export const SlideNav = () => {
             exit="exit"
           >
             <motion.div 
-              className="absolute inset-0 backdrop-blur-md"
+              className="absolute inset-0 backdrop-blur-xl bg-black/50"
               style={noiseStyle}
               variants={overlayVariants}
             >
@@ -185,13 +185,13 @@ export const SlideNav = () => {
                         <a
                           href={link.path}
                           onClick={closeNav}
-                          className="text-5xl text-black hover:text-black/50 transition-colors duration-300 inline-block"
+                          className="text-5xl text-white hover:text-white/70 transition-colors duration-300 inline-block"
                         >
                           {activeLink === index ? (
                             <SplitText 
                               text={link.title}
                               delay={50}
-                              className="text-5xl text-black"
+                              className="text-5xl text-white"
                               textAlign="right"
                               animationFrom={{ opacity: 0, transform: "translate3d(0,20px,0)" }}
                               animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
