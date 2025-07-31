@@ -56,7 +56,7 @@ export const Portfolio = () => {
     <div className="text-white py-8 md:py-8 overflow-hidden" id="portfolio">
       <div className="mx-auto px-4 sm:px-8 max-w-[1400px]">
         <div className="text-6xl font-bold text-center mb-16">
-          <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl">Selected Projects</ScrollFloat> 
+          <ScrollFloat containerClassName="inline-block" textClassName="text-white text-5xl md:text-6xl cursor-target">Selected Projects</ScrollFloat> 
         </div>
 
         <div className="space-y-8">
@@ -67,7 +67,7 @@ export const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-target"
             >
               <div
                 className="p-6 flex justify-between items-center cursor-pointer bg-black/20 border border-white/10"
@@ -111,7 +111,7 @@ export const Portfolio = () => {
                         <div className="flex justify-start items-center space-x-4">
                           <a
                             href={project.link}
-                            className="text-emerald-400 hover:text-blue-300 transition-colors"
+                            className="text-emerald-400 hover:text-blue-300 transition-colors cursor-target"
                           >
                             <HiOutlineExternalLink />
                           </a>

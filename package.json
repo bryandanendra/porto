@@ -15,8 +15,8 @@
   "dependencies": {
     "@nauverse/react-aurora-background": "^1.0.12",
     "@react-spring/web": "^9.7.5",
-    "framer-motion": "^11.18.2",
-    "gsap": "^3.12.7",
+    "framer-motion": "^12.23.12",
+    "gsap": "^3.13.0",
     "hamburger-react": "^2.5.2",
     "ogl": "^1.0.11",
     "react": "^18.3.1",

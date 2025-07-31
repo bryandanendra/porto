@@ -73,7 +73,7 @@ export const Stack = () => {
                 },
               },
             }}
-            className="bg-white/10 flex items-center justify-center w-[110px] h-[110px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] rounded-xl p-2 sm:p-3 md:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white/10 flex items-center justify-center w-[110px] h-[110px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] rounded-xl p-2 sm:p-3 md:p-4 shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-target"
           >
             {item.icon}
           </motion.div>

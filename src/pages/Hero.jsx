@@ -5,6 +5,7 @@ import Aurora from "../components/Aurora";
 import StarBorder from "../blocks/Animations/StarBorder/StarBorder";
 import BlurText from "../blocks/TextAnimations/BlurText/BlurText";
 import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
+import TiltedCard from "../blocks/Components/TiltedCard/TiltedCard";
 
 export const Hero = () => {
   return (
@@ -26,11 +27,32 @@ export const Hero = () => {
             className="relative mb-6 mt-16"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
-            <img
-              src={profilepic}
-              alt="Brian Danendra"
-              className="w-[140px] sm:w-[170px] md:w-[210px] relative z-10"
-            />
+            <div className="relative z-10">
+              <div className="w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] md:w-[210px] md:h-[210px] cursor-target">
+                <TiltedCard
+                  imageSrc={profilepic}
+                  altText="Brian Danendra"
+                  containerHeight="100%"
+                  containerWidth="100%"
+                  imageHeight="100%"
+                  imageWidth="100%"
+                  scaleOnHover={1.2}
+                  rotateAmplitude={25}
+                  showMobileWarning={false}
+                  showTooltip={false}
+                  imageClassName="rounded-full"
+                  displayOverlayContent={true}
+                  overlayContent={
+                    <div className="w-50 h-12 bg-gradient-to-br from-white-500/20 to-purple-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                      <div className="text-white text-base font-bold text-center">
+                        <div className="animate-pulse">Hover Me!</div>
+                        
+                      </div>
+                    </div>
+                  }
+                />
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -43,7 +65,7 @@ export const Hero = () => {
               <div className="flex justify-center w-full mb-2">
                 <BlurText text="Hi, I am" className="text-white" />
               </div>
-              <div className="flex justify-center w-full">
+              <div className="flex justify-center w-full cursor-target">
                 <BlurText text="Brian Danendra" className="text-blue-400" />
               </div>
             </h1>
@@ -56,16 +78,15 @@ export const Hero = () => {
                 <StarBorder 
                   color="#4f9fff"
                   speed="4s"
-                  className="font-medium hover:scale-105 transition-transform"
+                  className="font-medium hover:scale-105 transition-transform cursor-target"
                   type="button"
                 >
                   Contact Me
                 </StarBorder>
               </a>
               <motion.a
-                
+                className="inline-block cursor-target"
                 whileHover={{ scale: 1.05 }}
-                className="inline-block"
               >
                 <div className="relative inline-block py-[1px] overflow-hidden rounded-[20px] font-medium hover:scale-105 transition-transform">
                   <div className="relative z-10 bg-gradient-to-b from-gray-900 to-black border border-gray-800 text-white rounded-[20px] overflow-hidden" style={{ width: '149px', height: '58px' }}>

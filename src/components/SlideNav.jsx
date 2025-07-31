@@ -133,7 +133,7 @@ export const SlideNav = () => {
               <a
                 href={link.path}
                 className="transform hover:skew-x-12 hover:text-white/50 
-                          transition-all duration-300 ease-in-out text-white"
+                          transition-all duration-300 ease-in-out text-white cursor-target"
               >
                 {link.title}
               </a>
@@ -144,7 +144,7 @@ export const SlideNav = () => {
 
       <div
         className="md:hidden absolute top-5 right-5 border rounded
-                  z-[100] text-white border-white/70 cursor-pointer backdrop-blur-xl bg-black/30 p-1"
+                  z-[100] text-white border-white/70 cursor-pointer backdrop-blur-xl bg-black/30 p-1 cursor-target"
       >
         <Hamburger 
           toggled={nav} 
@@ -185,7 +185,7 @@ export const SlideNav = () => {
                         <a
                           href={link.path}
                           onClick={closeNav}
-                          className="text-5xl text-white hover:text-white/70 transition-colors duration-300 inline-block"
+                          className="text-5xl text-white hover:text-white/70 transition-colors duration-300 inline-block cursor-target"
                         >
                           {activeLink === index ? (
                             <SplitText 
