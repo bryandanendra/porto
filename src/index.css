@@ -24,3 +24,26 @@ body {
   width: 100%;
   position: relative;
 }
+
+/* Cursor targeting hanya aktif pada desktop */
+.mobile-cursor .cursor-target {
+  cursor: auto !important;
+}
+
+.desktop-cursor .cursor-target {
+  cursor: none !important;
+}
+
+/* Pastikan cursor normal pada mobile */
+@media (max-width: 768px) {
+  .cursor-target {
+    cursor: auto !important;
+  }
+}
+
+/* Pastikan cursor targeting hanya pada desktop */
+@media (min-width: 769px) {
+  .desktop-cursor .cursor-target {
+    cursor: none !important;
+  }
+}

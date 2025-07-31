@@ -43,9 +43,9 @@ export const Hero = () => {
                   imageClassName="rounded-full"
                   displayOverlayContent={true}
                   overlayContent={
-                    <div className="w-50 h-12 bg-gradient-to-br from-white-500/20 to-purple-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-20 h-12 flex items-center justify-center">
                       <div className="text-white text-base font-bold text-center">
-                        <div className="animate-pulse">Hover Me!</div>
+                        <div className="animate-pulse">Hiiii!</div>
                         
                       </div>
                     </div>
