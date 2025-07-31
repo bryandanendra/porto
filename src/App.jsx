@@ -6,6 +6,7 @@ import { Hero } from "./pages/Hero";
 import { Portfolio } from "./pages/Portfolio";
 import { Stack } from "./pages/Stack";
 import { TargetCursor } from "./blocks/Animations";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Portfolio/>
       <Stack/>
       <Footer/>
+      <Analytics />
     </div>
   )
 }
