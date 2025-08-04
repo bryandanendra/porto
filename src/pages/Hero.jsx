@@ -63,10 +63,10 @@ export const Hero = () => {
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-3 md:mb-4 text-center">
               <div className="flex justify-center w-full mb-2">
-                <BlurText text="Hi, I am" className="text-white" />
+                <BlurText text="Hi, I am" className="text-white cursor-target" />
               </div>
-              <div className="flex justify-center w-full cursor-target">
-                <BlurText text="Brian Danendra" className="text-blue-400" />
+              <div className="flex justify-center w-full">
+                <BlurText text="Brian Danendra" className="text-blue-400 cursor-target" />
               </div>
             </h1>
             <p className="text-base md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
