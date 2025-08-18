@@ -195,7 +195,10 @@ export const Portfolio = () => {
                         <div className="w-full h-full relative flex items-center justify-center cursor-target">
                           {/* Card Header */}
                           <div className="absolute top-0 left-0 right-0 p-4 flex items-center gap-3 z-10">
-                            <div className="flex items-center justify-center text-white font-bold text-xl">2</div>
+                          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 5v14M5 12h14" stroke="white" strokeWidth="3" strokeLinecap="round" transform="rotate(45 12 12)" />
+</svg>
+
                             <span className="text-white text-lg font-medium">Engage</span>
                           </div>
                           <div className="absolute inset-0 flex items-center justify-center">
