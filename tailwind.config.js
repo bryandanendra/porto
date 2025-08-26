@@ -42,4 +42,8 @@ export default {
     },
   },
   plugins: [],
+  // Optimasi untuk production
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 }

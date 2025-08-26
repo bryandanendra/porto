@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilepic from "../assets/images/profilepic.png";
+import profilepic from "../assets/images/profilepic.PNG";
 import Aurora from "../components/Aurora";
 import StarBorder from "../blocks/Animations/StarBorder/StarBorder";
 import BlurText from "../blocks/TextAnimations/BlurText/BlurText";

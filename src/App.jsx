@@ -1,13 +1,22 @@
 import { Footer } from "./components/Footer";
 // import { Navbar } from "./components/Navbar";
 import SlideNav from "./components/SlideNav";
-import { About } from "./pages/About";
-import { Hero } from "./pages/Hero";
-import { Portfolio } from "./pages/Portfolio";
-import { Stack } from "./pages/Stack";
 import { TargetCursor, SplashCursor } from "./blocks/Animations";
 import { Analytics } from "@vercel/analytics/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
+
+// Lazy load komponen besar
+const About = lazy(() => import("./pages/About").then(module => ({ default: module.About })));
+const Hero = lazy(() => import("./pages/Hero").then(module => ({ default: module.Hero })));
+const Portfolio = lazy(() => import("./pages/Portfolio").then(module => ({ default: module.Portfolio })));
+const Stack = lazy(() => import("./pages/Stack").then(module => ({ default: module.Stack })));
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-emerald-400"></div>
+  </div>
+);
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -47,10 +56,18 @@ export default function App() {
     <div className="w-full overflow-x-hidden">
       {isMobile ? <SplashCursor /> : <TargetCursor />}
       <SlideNav />
-      <Hero/>
-      <About/>
-      <Portfolio/>
-      <Stack/>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Hero/>
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <About/>
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Portfolio/>
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Stack/>
+      </Suspense>
       <Footer/>
       <Analytics />
     </div>

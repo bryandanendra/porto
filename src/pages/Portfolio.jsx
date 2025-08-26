@@ -5,10 +5,7 @@ import proj1 from "../assets/images/tmo-nusantara-tn.jpg";
 import proj2 from "../assets/images/overthink-tn.jpg";
 import proj3 from "../assets/images/melangkah-tn.jpg";
 import proj4 from "../assets/images/smaug-rewind-tn.jpg";
-import video1 from "../assets/video/1.mp4";
-import video2 from "../assets/video/2.mp4";
-import video3 from "../assets/video/3.mp4";
-import video4 from "../assets/video/4.mp4";
+import { CLOUDINARY_VIDEOS } from "../config/cloudinary";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FiChevronDown } from "react-icons/fi";
 import ScrollFloat from "../blocks/TextAnimations/ScrollFloat/ScrollFloat";
@@ -131,7 +128,7 @@ export const Portfolio = () => {
                             muted
                             loop
                             playsInline
-                            src={video1}
+                            src={CLOUDINARY_VIDEOS.video1}
                             type="video/mp4"
                             preload="auto"
                             style={{ minHeight: '100%', minWidth: '100%' }}
@@ -157,7 +154,7 @@ export const Portfolio = () => {
                             muted
                             loop
                             playsInline
-                            src={video2}
+                            src={CLOUDINARY_VIDEOS.video2}
                             type="video/mp4"
                             preload="auto"
                             style={{ minHeight: '100%', minWidth: '100%' }}
@@ -183,7 +180,7 @@ export const Portfolio = () => {
                             muted
                             loop
                             playsInline
-                            src={video3}
+                            src={CLOUDINARY_VIDEOS.video3}
                             type="video/mp4"
                             preload="auto"
                             style={{ minHeight: '100%', minWidth: '100%' }}
@@ -208,7 +205,7 @@ export const Portfolio = () => {
                             muted
                             loop
                             playsInline
-                            src={video4}
+                            src={CLOUDINARY_VIDEOS.video4}
                             type="video/mp4"
                             preload="auto"
                             style={{ minHeight: '100%', minWidth: '100%' }}

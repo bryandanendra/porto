@@ -3,19 +3,8 @@ import Masonry from "../blocks/Components/Masonry/Masonry";
 import SpotlightCard from "../blocks/Components/SpotlightCard/SpotlightCard";
 import ScrollFloat from "../blocks/TextAnimations/ScrollFloat/ScrollFloat";
 
-// Import gambar lokal
-import photo1 from "../assets/images/1.jpg";
-import photo2 from "../assets/images/2.jpg";
-import photo3 from "../assets/images/3.jpg";
-import photo4 from "../assets/images/4.jpg";
-import photo5 from "../assets/images/5.jpg";
-import photo6 from "../assets/images/6.jpg";
-import photo7 from "../assets/images/7.jpg";
-import photo8 from "../assets/images/8.jpg";
-import photo9 from "../assets/images/9.jpg";
-import photo10 from "../assets/images/10.jpg";
-import photo11 from "../assets/images/11.jpg";
-import photo12 from "../assets/images/12.jpg";
+// Import gambar dari Cloudinary
+import { CLOUDINARY_IMAGES } from "../config/cloudinary";
 
 export const About = () => {
   // Data gambar untuk Masonry
@@ -23,62 +12,62 @@ export const About = () => {
     {
       id: 1,
       height: 400,
-      image: photo1, // Video editing
+      image: CLOUDINARY_IMAGES.photo1, // Video editing
     },
     {
       id: 2,
       height: 300,
-      image: photo2, // Filmmaking
+      image: CLOUDINARY_IMAGES.photo2, // Filmmaking
     },
     {
       id: 3,
       height: 500,
-      image: photo3, // Camera footage
+      image: CLOUDINARY_IMAGES.photo3, // Camera footage
     },
     {
       id: 4,
       height: 350,
-      image: photo4, // Video editing setup
+      image: CLOUDINARY_IMAGES.photo4, // Video editing setup
     },
     {
       id: 5,
       height: 400,
-      image: photo5, // Production
+      image: CLOUDINARY_IMAGES.photo5, // Production
     },
     {
       id: 6,
       height: 450,
-      image: photo6, // Studio equipment
+      image: CLOUDINARY_IMAGES.photo6, // Studio equipment
     },
     {
       id: 7,
       height: 380,
-      image: photo7, // Video editing interface
+      image: CLOUDINARY_IMAGES.photo7, // Video editing interface
     },
     {
       id: 8,
       height: 420,
-      image: photo8, // Motion graphics
+      image: CLOUDINARY_IMAGES.photo8, // Motion graphics
     },
     {
       id: 9,
       height: 420,
-      image: photo9, // Motion graphics
+      image: CLOUDINARY_IMAGES.photo9, // Motion graphics
     },
     {
       id: 10,
       height: 420,
-      image: photo10, // Motion graphics
+      image: CLOUDINARY_IMAGES.photo10, // Motion graphics
     },
     {
       id: 11,
       height: 420,
-      image: photo11, // Motion graphics
+      image: CLOUDINARY_IMAGES.photo11, // Motion graphics
     },
     {
       id: 12,
       height: 420,
-      image: photo12, // Motion graphics
+      image: CLOUDINARY_IMAGES.photo12, // Motion graphics
     }
   ];
 
