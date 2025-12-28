@@ -42,6 +42,8 @@ export const Hero = () => {
                   showTooltip={false}
                   imageClassName="rounded-full"
                   displayOverlayContent={true}
+                  fetchPriority="high"
+                  loading="eager"
                   overlayContent={
                     <div className="w-20 h-12 flex items-center justify-center">
                       <div className="text-white text-base font-bold text-center">
@@ -95,6 +97,7 @@ export const Hero = () => {
                       alt="View Work"
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>

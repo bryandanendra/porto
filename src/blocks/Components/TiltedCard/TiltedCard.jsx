@@ -1,5 +1,5 @@
 /*
-	Installed from https://reactbits.dev/tailwind/
+  Installed from https://reactbits.dev/tailwind/
 */
 
 import { useRef, useState } from "react";
@@ -26,6 +26,8 @@ export default function TiltedCard({
   overlayContent = null,
   displayOverlayContent = false,
   imageClassName = "",
+  fetchPriority = "auto",
+  loading = "lazy",
 }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
@@ -107,6 +109,8 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
+          fetchPriority={fetchPriority}
+          loading={loading}
           className={`absolute top-0 left-0 object-contain rounded-none will-change-transform [transform:translateZ(0)] ${imageClassName}`}
           style={{
             width: imageWidth,

@@ -333,6 +333,8 @@ export const Portfolio = () => {
                           src={project.src}
                           alt={project.title}
                           className="w-full md:w-1/2 h-64 object-cover rounded-lg"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="flex-1">
                           <p className="text-white/70 mb-4">{project.desc}</p>

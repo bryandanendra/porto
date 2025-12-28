@@ -11,22 +11,22 @@ import Threads from '../blocks/Backgrounds/Threads/Threads';
 const stackItems = [
   {
     id: 1,
-    icon: <img src={premiereProIcon} alt="Premiere Pro" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" />,
+    icon: <img src={premiereProIcon} alt="Premiere Pro" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" loading="lazy" decoding="async" />,
     color: "text-blue-500",
   },
   {
     id: 2,
-    icon: <img src={afterEffectsIcon} alt="After Effects" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" />,
+    icon: <img src={afterEffectsIcon} alt="After Effects" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" loading="lazy" decoding="async" />,
     color: "text-purple-500",
   },
   {
     id: 3,
-    icon: <img src={davinciResolveIcon} alt="DaVinci Resolve" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" />,
+    icon: <img src={davinciResolveIcon} alt="DaVinci Resolve" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" loading="lazy" decoding="async" />,
     color: "text-orange-500",
   },
   {
     id: 4,
-    icon: <img src={capcutIcon} alt="CapCut" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" />,
+    icon: <img src={capcutIcon} alt="CapCut" className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain" loading="lazy" decoding="async" />,
     color: "text-cyan-400",
   },
 ];
@@ -64,12 +64,12 @@ export const Stack = () => {
     >
       {/* Background Threads */}
       <div className="absolute inset-0 z-0" style={{ willChange: 'transform' }}>
-        <Threads 
+        <Threads
           {...threadsConfig}
           className="w-full h-full"
         />
       </div>
-      
+
       {/* Content overlay */}
       <div className="relative z-10">
         <div className="text-4xl sm:text-6xl md:text-7xl text-gray-100 font-bold mb-10 md:mb-16 lg:mb-20 mx-auto">
