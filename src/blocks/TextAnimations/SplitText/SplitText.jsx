@@ -1,5 +1,5 @@
 /*
-	Installed from https://reactbits.dev/tailwind/
+  Installed from https://reactbits.dev/tailwind/
 */
 
 import { useSprings, animated } from "@react-spring/web";
@@ -45,15 +45,15 @@ const SplitText = ({
       from: animationFrom,
       to: inView
         ? async (next) => {
-            await next(animationTo);
-            animatedCount.current += 1;
-            if (
-              animatedCount.current === letters.length &&
-              onLetterAnimationComplete
-            ) {
-              onLetterAnimationComplete();
-            }
+          await next(animationTo);
+          animatedCount.current += 1;
+          if (
+            animatedCount.current === letters.length &&
+            onLetterAnimationComplete
+          ) {
+            onLetterAnimationComplete();
           }
+        }
         : animationFrom,
       delay: i * delay,
       config: { easing },
@@ -61,7 +61,7 @@ const SplitText = ({
   );
 
   return (
-    <p
+    <span
       ref={ref}
       className={`split-parent overflow-hidden inline ${className}`}
       style={{ textAlign, whiteSpace: "normal", wordWrap: "break-word" }}
@@ -91,7 +91,7 @@ const SplitText = ({
           </span>
         </span>
       ))}
-    </p>
+    </span>
   );
 };
 

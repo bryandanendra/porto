@@ -11,8 +11,8 @@ export const Hero = () => {
   return (
     <div className="relative overflow-hidden min-h-screen text-white w-full">
       <div className="absolute inset-0 bg-black">
-        <Aurora 
-          colorStops={["#2460A7", "#2660e5", "#00d8ff"]} 
+        <Aurora
+          colorStops={["#2460A7", "#2660e5", "#00d8ff"]}
           amplitude={1.2}
           blend={0.6}
         />
@@ -46,7 +46,7 @@ export const Hero = () => {
                     <div className="w-20 h-12 flex items-center justify-center">
                       <div className="text-white text-base font-bold text-center">
                         <div className="animate-pulse">Hiiii!</div>
-                        
+
                       </div>
                     </div>
                   }
@@ -75,7 +75,7 @@ export const Hero = () => {
 
             <div className="flex gap-4 justify-center">
               <a href="#contact">
-                <StarBorder 
+                <StarBorder
                   color="#4f9fff"
                   speed="4s"
                   className="font-medium hover:scale-105 transition-transform cursor-target"
@@ -90,10 +90,11 @@ export const Hero = () => {
               >
                 <div className="relative inline-block py-[1px] overflow-hidden rounded-[20px] font-medium hover:scale-105 transition-transform">
                   <div className="relative z-10 bg-gradient-to-b from-gray-900 to-black border border-gray-800 text-white rounded-[20px] overflow-hidden" style={{ width: '149px', height: '58px' }}>
-                    <img 
-                      src="https://media.giphy.com/media/KpACNEh8jXK2Q/giphy.gif" 
-                      alt="View Work" 
+                    <img
+                      src="https://media.giphy.com/media/KpACNEh8jXK2Q/giphy.gif"
+                      alt="View Work"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>

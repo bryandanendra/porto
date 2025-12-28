@@ -4,7 +4,7 @@ import SpotlightCard from "../blocks/Components/SpotlightCard/SpotlightCard";
 import ScrollFloat from "../blocks/TextAnimations/ScrollFloat/ScrollFloat";
 
 // Import gambar dari Cloudinary
-import { CLOUDINARY_IMAGES } from "../config/cloudinary";
+import { OPTIMIZED_IMAGES } from "../config/cloudinary";
 
 export const About = () => {
   // Data gambar untuk Masonry
@@ -12,62 +12,47 @@ export const About = () => {
     {
       id: 1,
       height: 400,
-      image: CLOUDINARY_IMAGES.photo1, // Video editing
-    },
-    {
-      id: 2,
-      height: 300,
-      image: CLOUDINARY_IMAGES.photo2, // Filmmaking
+      image: OPTIMIZED_IMAGES.photo1, // Video editing
     },
     {
       id: 3,
       height: 500,
-      image: CLOUDINARY_IMAGES.photo3, // Camera footage
-    },
-    {
-      id: 4,
-      height: 350,
-      image: CLOUDINARY_IMAGES.photo4, // Video editing setup
+      image: OPTIMIZED_IMAGES.photo3, // Camera footage
     },
     {
       id: 5,
       height: 400,
-      image: CLOUDINARY_IMAGES.photo5, // Production
+      image: OPTIMIZED_IMAGES.photo5, // Production
     },
     {
       id: 6,
       height: 450,
-      image: CLOUDINARY_IMAGES.photo6, // Studio equipment
+      image: OPTIMIZED_IMAGES.photo6, // Studio equipment
     },
     {
       id: 7,
       height: 380,
-      image: CLOUDINARY_IMAGES.photo7, // Video editing interface
+      image: OPTIMIZED_IMAGES.photo7, // Video editing interface
     },
     {
       id: 8,
       height: 420,
-      image: CLOUDINARY_IMAGES.photo8, // Motion graphics
+      image: OPTIMIZED_IMAGES.photo8, // Motion graphics
     },
     {
       id: 9,
       height: 420,
-      image: CLOUDINARY_IMAGES.photo9, // Motion graphics
+      image: OPTIMIZED_IMAGES.photo9, // Motion graphics
     },
     {
       id: 10,
       height: 420,
-      image: CLOUDINARY_IMAGES.photo10, // Motion graphics
-    },
-    {
-      id: 11,
-      height: 420,
-      image: CLOUDINARY_IMAGES.photo11, // Motion graphics
+      image: OPTIMIZED_IMAGES.photo10, // Motion graphics
     },
     {
       id: 12,
       height: 420,
-      image: CLOUDINARY_IMAGES.photo12, // Motion graphics
+      image: OPTIMIZED_IMAGES.photo12, // Motion graphics
     }
   ];
 
@@ -78,21 +63,21 @@ export const About = () => {
           <ScrollFloat containerClassName="inline-block" textClassName="text-white text-9xl md:text-7xl cursor-target">About Me</ScrollFloat>
         </div>
       </div>
-      
-      <div className="h-[1250px] md:h-[850px] lg:h-[700px] xl:h-[600px] mb-8 sm:mb-16 "> {/* Tinggi responsif berdasarkan ukuran layar */}
+
+      <div className="h-[1250px] md:h-[850px] lg:h-[700px] xl:h-[600px] mb-4 sm:mb-8"> {/* Tinggi responsif berdasarkan ukuran layar */}
         <Masonry data={masonryData} />
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white mb-16 max-w-4xl mx-auto justify-items-center">
         <SpotlightCard spotlightColor="rgba(52, 211, 153, 0.3)" className="w-full max-w-md flex flex-col h-full cursor-target">
           <h3 className="text-2xl font-bold mb-4 text-emerald-400">Experiences</h3>
           <p className="text-white/70 mb-6 flex-grow">
-            With 2+ years in the game, I've mastered everything from viral social content 
+            With 2+ years in the game, I've mastered everything from viral social content
             to commercial bangers. My superpower? Next-level color grading & sick VFX.
           </p>
           <div className="flex justify-start">
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-emerald-900/50 hover:bg-emerald-800/60 text-emerald-400 rounded-full border border-emerald-500/40 transition-colors duration-300 w-fit cursor-target"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -102,17 +87,17 @@ export const About = () => {
             </a>
           </div>
         </SpotlightCard>
-        
+
         <SpotlightCard spotlightColor="rgba(139, 92, 246, 0.3)" className="w-full max-w-md flex flex-col h-full cursor-target">
           <h3 className="text-2xl font-bold mb-4 text-purple-400">Creativity</h3>
           <p className="text-white/70 mb-6 flex-grow">
-            I blend creativity with technical skills to craft stunning visuals and tell 
-            captivating stories through video. Every project is a chance to experiment 
+            I blend creativity with technical skills to craft stunning visuals and tell
+            captivating stories through video. Every project is a chance to experiment
             with fresh techniques and innovative styles.
           </p>
           <div className="flex justify-start">
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-purple-900/50 hover:bg-purple-800/60 text-purple-400 rounded-full border border-purple-500/40 transition-colors duration-300 w-fit cursor-target"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -122,7 +107,7 @@ export const About = () => {
             </a>
           </div>
         </SpotlightCard>
-        
+
       </div>
     </section>
   );
