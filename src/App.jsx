@@ -1,7 +1,7 @@
 import { Footer } from "./components/Footer";
 // import { Navbar } from "./components/Navbar";
 import SlideNav from "./components/SlideNav";
-import { TargetCursor } from "./blocks/Animations";
+import { TargetCursor, GradualBlur } from "./blocks/Animations";
 import { Analytics } from "@vercel/analytics/react";
 import { lazy, Suspense, useState, useEffect } from "react";
 
@@ -41,6 +41,19 @@ export default function App() {
   return (
     <div className="w-full overflow-x-hidden">
       {showCustomCursor && <TargetCursor />}
+
+      {/* Gradual Blur - Bottom only (optimized for performance) */}
+      <GradualBlur
+        target="page"
+        position="bottom"
+        height="8rem"
+        strength={2}
+        divCount={5}
+        curve="bezier"
+        zIndex={9999}
+        opacity={0.85}
+      />
+
       <SlideNav />
       <Suspense fallback={<LoadingSpinner />}>
         <Hero />
