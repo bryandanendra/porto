@@ -1,10 +1,9 @@
 import React from "react";
 import {
-  AiFillGithub,
   AiFillFacebook,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 import BlurText from "../blocks/TextAnimations/BlurText/BlurText";
 import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
 export const Footer = () => {
@@ -14,7 +13,7 @@ export const Footer = () => {
         <div className="flex items-center justify-between flex-col md:flex-row">
           <div>
             <h2 className="md:text-7xl text-4xl font-bold mb-5 text-white/50">
-              <BlurText text="Get in touch" className="text-gray-400"/>
+              <BlurText text="Get in touch" className="text-gray-400" />
             </h2>
             <a
               className="md:text-7xl text-3xl font-semibold text-white underline decoration-gray-400 decoration-2
@@ -25,13 +24,13 @@ export const Footer = () => {
             </a>
             <div className="mt-4">
               <p className="text-white/70 text-base md:text-xl">Or find me on Instagram:</p>
-              <a 
-                href="https://instagram.com/brian.danendra" 
+              <a
+                href="https://instagram.com/brian.danendra"
                 className="text-xl md:text-2xl font-medium text-white/90 hover:text-white transition duration-300 flex items-center gap-2 mt-1"
               >
                 <AiFillInstagram size={24} />
-                <SplitText 
-                  text="@brian.danendra" 
+                <SplitText
+                  text="@brian.danendra"
                   delay={50}
                   textAlign="left"
                   className="text-xl md:text-2xl"
@@ -66,20 +65,7 @@ export const Footer = () => {
           </p> */}
 
           <ul className="flex gap-5 flex-wrap">
-            <a
-              href="https://github.com/bryandanendra"
-              aria-label="GitHub"
-              className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
-            >
-              <AiFillGithub size={30} />
-            </a>
-            {/* <a
-              href="https://discord.com/users/yourusername"
-              aria-label="Discord"
-              className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full"
-            >
-              <FaDiscord size={30} />
-            </a> */}
+
             <a
               href="https://instagram.com/brian.danendra"
               aria-label="Instagram"
