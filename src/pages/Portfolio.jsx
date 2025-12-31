@@ -1,6 +1,5 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import proj1 from "../assets/images/tmo-nusantara-tn.jpg";
 import proj2 from "../assets/images/overthink-tn.jpg";
 import proj3 from "../assets/images/melangkah-tn.jpg";
@@ -130,8 +129,7 @@ export const Portfolio = () => {
                                 playsInline
                                 src={OPTIMIZED_VIDEOS.video1}
                                 type="video/mp4"
-                                preload="metadata"
-                                loading="lazy"
+                                preload="auto"
                                 style={{ minHeight: '100%', minWidth: '100%' }}
                               ></video>
                             </div>
@@ -157,8 +155,7 @@ export const Portfolio = () => {
                                 playsInline
                                 src={OPTIMIZED_VIDEOS.video2}
                                 type="video/mp4"
-                                preload="metadata"
-                                loading="lazy"
+                                preload="auto"
                                 style={{ minHeight: '100%', minWidth: '100%' }}
                               ></video>
                             </div>
@@ -184,8 +181,7 @@ export const Portfolio = () => {
                                 playsInline
                                 src={OPTIMIZED_VIDEOS.video3}
                                 type="video/mp4"
-                                preload="metadata"
-                                loading="lazy"
+                                preload="auto"
                                 style={{ minHeight: '100%', minWidth: '100%' }}
                               ></video>
                             </div>
@@ -210,7 +206,7 @@ export const Portfolio = () => {
                                   playsInline
                                   src={OPTIMIZED_VIDEOS.video4}
                                   type="video/mp4"
-                                  preload="metadata"
+                                  preload="auto"
                                   style={{ minHeight: '100%', minWidth: '100%' }}
                                 ></video>
 
@@ -239,8 +235,7 @@ export const Portfolio = () => {
                                 playsInline
                                 src={OPTIMIZED_VIDEOS.video5}
                                 type="video/mp4"
-                                preload="metadata"
-                                loading="lazy"
+                                preload="auto"
                                 style={{ minHeight: '100%', minWidth: '100%' }}
                               ></video>
                             </div>
@@ -267,8 +262,7 @@ export const Portfolio = () => {
                                 playsInline
                                 src={OPTIMIZED_VIDEOS.video6}
                                 type="video/mp4"
-                                preload="metadata"
-                                loading="lazy"
+                                preload="auto"
                                 style={{ minHeight: '100%', minWidth: '100%' }}
                               ></video>
                             </div>
@@ -285,58 +279,74 @@ export const Portfolio = () => {
 
           {/* Projects list with higher z-index to appear above the cards */}
           <div className="space-y-6 relative -mt-30" style={{ zIndex: 10, position: 'relative' }}>
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-target relative"
-                style={{ backgroundColor: 'rgba(15, 15, 15, 0.8)', backdropFilter: 'blur(4px)' }}
-              >
-                <div
-                  className="p-6 flex justify-between items-center cursor-pointer bg-black/20 border border-white/10 hover:bg-black/30 transition-colors duration-300"
-                  onClick={() => toggleExpand(index)}
-                  role="button"
-                  tabIndex={0}
-                  aria-expanded={expandedIndex === index}
-                  onKeyDown={(e) => e.key === 'Enter' && toggleExpand(index)}
+            {projects.map((project, index) => {
+              const isExpanded = expandedIndex === index;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-target relative"
+                  style={{ backgroundColor: 'rgba(15, 15, 15, 0.8)', backdropFilter: 'blur(4px)' }}
                 >
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
-                  <div className="flex items-center space-x-4">
-                    <span className="text-3xl font-light text-emerald-300">
-                      0{index + 1}
-                    </span>
-                    <FiChevronDown
-                      className={`w-6 h-6 transform transition-transform ${expandedIndex === index ? "rotate-180" : ""
-                        }`}
-                    />
+                  <div
+                    className="p-6 flex justify-between items-center cursor-pointer bg-black/20 border border-white/10 hover:bg-black/30 transition-colors duration-300"
+                    onClick={() => toggleExpand(index)}
+                    role="button"
+                    tabIndex={0}
+                    aria-expanded={isExpanded}
+                    onKeyDown={(e) => e.key === 'Enter' && toggleExpand(index)}
+                  >
+                    <h3 className="text-2xl font-semibold">{project.title}</h3>
+                    <div className="flex items-center space-x-4">
+                      <span className="text-3xl font-light text-emerald-300">
+                        0{index + 1}
+                      </span>
+                      <FiChevronDown
+                        className="w-6 h-6 transition-transform duration-300"
+                        style={{
+                          transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-                <AnimatePresence mode="wait">
-                  {expandedIndex === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0, overflow: "hidden" }}
-                      animate={{ height: "auto", opacity: 1, overflow: "visible" }}
-                      exit={{ height: 0, opacity: 0, overflow: "hidden" }}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="px-6 pb-6 bg-black/20 border border-white/10 block"
-                    >
-                      <motion.div
-                        className="flex flex-col md:flex-row gap-8 pt-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, duration: 0.4 }}
-                      >
-                        <img
-                          src={project.src}
-                          alt={project.title}
-                          className="w-full md:w-1/2 h-64 object-cover rounded-lg"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div className="flex-1">
+
+                  {/* Using CSS maxHeight for smooth animation */}
+                  <div
+                    className="bg-black/20 border-t border-white/10 transition-all duration-500 ease-in-out"
+                    style={{
+                      maxHeight: isExpanded ? '800px' : '0px',
+                      opacity: isExpanded ? 1 : 0,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <div className="px-6 py-6">
+                      <div className="flex flex-col md:flex-row gap-8">
+                        <div
+                          className="w-full md:w-1/2 transition-all duration-500 delay-100"
+                          style={{
+                            opacity: isExpanded ? 1 : 0,
+                            transform: isExpanded ? 'scale(1)' : 'scale(0.95)',
+                          }}
+                        >
+                          <img
+                            src={project.src}
+                            alt={project.title}
+                            className="w-full h-64 object-cover rounded-lg"
+                            loading="eager"
+                            decoding="async"
+                          />
+                        </div>
+                        <div
+                          className="flex-1 transition-all duration-500 delay-150"
+                          style={{
+                            opacity: isExpanded ? 1 : 0,
+                            transform: isExpanded ? 'translateX(0)' : 'translateX(20px)',
+                          }}
+                        >
                           <p className="text-white/70 mb-4">{project.desc}</p>
                           <p className="text-emerald-300 font-medium mb-2">
                             Tools: {project.tools}
@@ -355,12 +365,12 @@ export const Portfolio = () => {
                             </a>
                           </div>
                         </div>
-                      </motion.div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

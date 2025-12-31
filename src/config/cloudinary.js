@@ -19,7 +19,7 @@ export const CLOUDINARY_IMAGES = {
   photo4: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216931/4_m2fjsw.jpg",
   photo5: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216933/5_cpfxkd.jpg",
   photo6: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216932/6_wff8sw.jpg",
-  photo7: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216943/7_p2obtc.jpg",
+
   photo8: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216933/8_odsu95.jpg",
   photo9: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216932/9_a0l1cx.jpg",
   photo10: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216933/10_iavypp.jpg",
@@ -88,7 +88,7 @@ export const OPTIMIZED_IMAGES = {
   photo4: getOptimizedImageUrl('photo4', { quality: 'auto', format: 'webp', width: 600 }),
   photo5: getOptimizedImageUrl('photo5', { quality: 'auto', format: 'webp', width: 600 }),
   photo6: getOptimizedImageUrl('photo6', { quality: 'auto', format: 'webp', width: 600 }),
-  photo7: getOptimizedImageUrl('photo7', { quality: 'auto', format: 'webp', width: 600 }),
+
   photo8: getOptimizedImageUrl('photo8', { quality: 'auto', format: 'webp', width: 600 }),
   photo9: getOptimizedImageUrl('photo9', { quality: 'auto', format: 'webp', width: 600 }),
   photo10: getOptimizedImageUrl('photo10', { quality: 'auto', format: 'webp', width: 600 }),

@@ -47,3 +47,17 @@ body {
     cursor: none !important;
   }
 }
+
+/* Optimasi untuk animasi yang lebih smooth */
+@layer utilities {
+  .smooth-accordion {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+  }
+}

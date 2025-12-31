@@ -29,11 +29,7 @@ export const About = () => {
       height: 450,
       image: OPTIMIZED_IMAGES.photo6, // Studio equipment
     },
-    {
-      id: 7,
-      height: 380,
-      image: OPTIMIZED_IMAGES.photo7, // Video editing interface
-    },
+
     {
       id: 8,
       height: 420,
@@ -64,7 +60,7 @@ export const About = () => {
         </div>
       </div>
 
-      <div className="h-[1250px] md:h-[850px] lg:h-[700px] xl:h-[600px] mb-4 sm:mb-8"> {/* Tinggi responsif berdasarkan ukuran layar */}
+      <div className="w-full min-h-[500px] mb-4 sm:mb-8"> {/* Tinggi otomatis mengikuti konten Masonry */}
         <Masonry data={masonryData} />
       </div>
 
