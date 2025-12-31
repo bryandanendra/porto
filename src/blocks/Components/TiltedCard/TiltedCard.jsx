@@ -109,7 +109,7 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
-          fetchPriority={fetchPriority}
+          fetchpriority={fetchPriority}
           loading={loading}
           className={`absolute top-0 left-0 object-contain rounded-none will-change-transform [transform:translateZ(0)] ${imageClassName}`}
           style={{

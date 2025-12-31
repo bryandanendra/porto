@@ -19,7 +19,6 @@ export const CLOUDINARY_IMAGES = {
   photo4: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216931/4_m2fjsw.jpg",
   photo5: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216933/5_cpfxkd.jpg",
   photo6: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216932/6_wff8sw.jpg",
-
   photo8: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216933/8_odsu95.jpg",
   photo9: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216932/9_a0l1cx.jpg",
   photo10: "https://res.cloudinary.com/ds4ota3jr/image/upload/v1756216933/10_iavypp.jpg",
